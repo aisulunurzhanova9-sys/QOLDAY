@@ -79,3 +79,71 @@ textarea::placeholder{color:#98a2b3}
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding:26px}.hero-art{min-height:145px;order:-1}.art-circle{width:130px;height:130px;font-size:57px;border-width:10px}.art-caption{right:20%;bottom:-3px}.action-grid{grid-template-columns:repeat(2,1fr)}.action-card{min-height:150px}.container{padding-top:20px}}
 @media(max-width:560px){.topbar{padding:13px 16px}.brand-mark{width:42px;height:42px}.brand strong{font-size:18px}.icon-button{display:block}.nav{display:none;flex-direction:column;padding:8px 16px 14px;gap:3px}.nav.open{display:flex}.nav-link{text-align:left}.container{padding:20px 16px 32px}.hero{padding:23px 19px;border-radius:20px;gap:10px}.hero-art{min-height:118px}.art-circle{width:105px;height:105px;font-size:47px}.art-caption{right:15%;font-size:10px}.hero-copy p{font-size:15px}.button-large{width:100%;font-size:14px}.status-card{padding:14px;align-items:flex-start}.demo-label{font-size:10px;white-space:nowrap}.action-grid{gap:10px}.action-card{padding:15px;min-height:145px}.action-card strong{font-size:14px}.action-card>span:last-child{font-size:12px}.translator-panel{padding:22px 17px}.call-screen{min-height:280px}.call-controls{gap:8px}.control-button{min-width:0;flex:1;padding:10px 6px}.footer{padding:22px 16px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* QOLDAU: жаңартылған дизайн */
+:root {
+  --blue: #0877d1;
+  --blue-dark: #0759a5;
+  --bg: #f3f8ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f3f8ff;
+}
+
+.topbar {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand-mark {
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(8, 119, 209, 0.15);
+}
+
+button,
+.nav-link,
+select {
+  border-radius: 14px;
+  transition: background-color 0.2s ease;
+}
+
+button {
+  min-height: 44px;
+  font-weight: 600;
+}
+
+.card,
+.panel,
+.translator-card,
+.review-card {
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(20, 70, 120, 0.07);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  button {
+    min-height: 48px;
+  }
+}
