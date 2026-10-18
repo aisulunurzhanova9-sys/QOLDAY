@@ -256,3 +256,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   translate();
 });
+// WhatsApp видео-диспетчер
+const whatsappLink = "https://wa.me/77009617640";
+
+document.querySelectorAll("#connect-button, [data-demo-call]").forEach(button => {
+  button.addEventListener("click", function () {
+    window.open(whatsappLink, "_blank");
+  });
+});
