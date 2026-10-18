@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#155eef">
+  <title>QOLDAU | Қолжетімді байланыс</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="QOLDAU басты беті" data-page="home">
+      <span class="brand-mark" aria-hidden="true">✋</span>
+      <span><strong>QOLDAU</strong><small id="brand-subtitle">Қолжетімді байланыс</small></span>
+    </a>
+    <div class="top-actions">
+      <label class="sr-only" for="language">Тіл / Язык</label>
+      <select id="language" aria-label="Тіл / Язык">
+        <option value="kk">ҚАЗ</option>
+        <option value="ru">РУС</option>
+      </select>
+      <button class="icon-button" id="menu-toggle" aria-label="Мәзірді ашу" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <nav class="nav" id="main-nav" aria-label="Негізгі мәзір">
+    <button class="nav-link active" data-page="home" data-i18n="navHome">Басты бет</button>
+    <button class="nav-link" data-page="translator" data-i18n="navTranslator">Аудармашы</button>
+    <button class="nav-link" data-page="help" data-i18n="navHelp">Көмек</button>
+    <button class="nav-link" data-page="reviews" data-i18n="navReviews">Пікірлер</button>
+  </nav>
+
+  <main class="container">
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="eyebrow">АҚТӨБЕ · ҚАЗАҚША / РУССКИЙ</span>
+          <h1 data-i18n="heroTitle">Сізге көмектесуге дайынбыз!</h1>
+          <p data-i18n="heroText">Ымдау тілі аудармашысымен байланысыңыз немесе қажетті көмекті таңдаңыз.</p>
+          <button class="button button-primary button-large" data-go="translator">
+            <span aria-hidden="true">▣</span> <span data-i18n="callTranslator">Онлайн аудармашыны шақыру</span>
+          </button>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle">🤟</div>
+          <div class="art-caption">QOLDAU</div>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <span class="status-dot" id="home-status-dot"></span>
+        <div class="status-copy">
+          <strong data-i18n="translatorStatus">Аудармашының мәртебесі</strong>
+          <span id="home-status-text">Аудармашы бос</span>
+        </div>
+        <span class="demo-label" data-i18n="demoMode">Демо режимі</span>
+      </div>
+
+      <h2 data-i18n="quickActions">Жылдам әрекеттер</h2>
+      <div class="action-grid">
+        <button class="action-card" data-go="translator">
+          <span class="action-icon blue">▣</span><strong data-i18n="videoCall">Бейнеқоңырау</strong>
+          <span data-i18n="videoCallDesc">Аудармашымен байланысу</span>
+        </button>
+        <button class="action-card" data-go="help">
+          <span class="action-icon coral">♡</span><strong data-i18n="needHelp">Маған көмек керек</strong>
+          <span data-i18n="needHelpDesc">Қажетті көмек түрін таңдаңыз</span>
+        </button>
+        <button class="action-card" data-go="chat">
+          <span class="action-icon violet">▤</span><strong data-i18n="textChat">Мәтіндік байланыс</strong>
+          <span data-i18n="textChatDesc">Демо хабарлама үлгісі</span>
+        </button>
+        <button class="action-card" data-go="reviews">
+          <span class="action-icon gold">★</span><strong data-i18n="reviews">Пікірлер</strong>
+          <span data-i18n="reviewsDesc">Баға беріп, пікір қалдыру</span>
+        </button>
+      </div>
+
+      <aside class="safety-note">
+        <span class="safety-icon">ⓘ</span>
+        <div><strong data-i18n="safetyTitle">Маңызды ақпарат</strong><p data-i18n="safetyText">Бұл демонстрациялық прототип. Шұғыл жағдайда тиісті жедел қызметке тікелей хабарласыңыз.</p></div>
+      </aside>
+    </section>
+
+    <section class="page" id="page-translator">
+      <button class="back-link" data-go="home">← <span data-i18n="backHome">Басты бетке қайту</span></button>
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="translatorSection">ОНЛАЙН ҚЫЗМЕТ</span>
+        <h1 data-i18n="translatorTitle">Ымдау тілі аудармашысы</h1>
+        <p data-i18n="translatorIntro">Бос аудармашымен тікелей байланысу мүмкіндігін тексеріңіз.</p>
+      </div>
+      <div class="translator-panel">
+        <div class="translator-avatar" aria-hidden="true">🤟</div>
+        <h2 data-i18n="connectionStatus">Қосылу мәртебесі</h2>
+        <div class="big-status" id="translator-status">● <span>Аудармашы бос</span></div>
+        <p class="muted" id="translator-description">Бұл мәртебе прототип ішінде ғана басқарылады.</p>
+        <button class="button button-primary button-large full-width" id="connect-button" data-i18n="connectButton">Аудармашыға қосылу</button>
+        <button class="button button-secondary full-width" id="toggle-availability" data-i18n="toggleStatus">Демо: мәртебені өзгерту</button>
+        <div class="notice hidden" id="unavailable-notice" role="status">
+          <strong data-i18n="noTranslatorTitle">Қазір бос аудармашы жоқ</strong>
+          <p data-i18n="noTranslatorText">Өтініш нақты кезекке қойылған жоқ. Кейінірек қайталап көріңіз немесе мәтіндік баламаны таңдаңыз.</p>
+          <button class="button button-secondary full-width" data-go="chat" data-i18n="tryText">Мәтіндік байланысқа өту</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="page-call">
+      <button class="back-link" data-go="translator">← <span data-i18n="backTranslator">Аудармашы бөліміне қайту</span></button>
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="demoCall">ДЕМО ҚОҢЫРАУ</span>
+        <h1 data-i18n="callTitle">Бейнеқоңырау</h1>
+        <p data-i18n="callIntro">Бұл экран нақты аудио немесе видео жібермейді.</p>
+      </div>
+      <div class="call-screen">
+        <div class="call-person"><div class="person-symbol">🤟</div><strong data-i18n="interpreterLabel">Сурдоаудармашы</strong><span data-i18n="sampleVideo">Демонстрациялық көрініс</span></div>
+        <div class="call-badge">DEMO · WebRTC қосылмаған</div>
+      </div>
+      <div class="call-controls">
+        <button class="control-button" id="camera-toggle"><span>▣</span><small data-i18n="camera">Камера</small></button>
+        <button class="control-button" id="mic-toggle"><span>♬</span><small data-i18n="microphone">Микрофон</small></button>
+        <button class="control-button hangup" id="end-call"><span>☎</span><small data-i18n="endCall">Аяқтау</small></button>
+      </div>
+      <p class="inline-feedback" id="call-feedback" role="status"></p>
+    </section>
+
+    <section class="page" id="page-help">
+      <button class="back-link" data-go="home">← <span data-i18n="backHome">Басты бетке қайту</span></button>
+      <div class="section-heading">
+        <span class="eyebrow" data-i18n="helpSection">ҚОЛДАУ</span>
+        <h1 data-i18n="helpTitle">Қандай көмек қажет?</h1>
+        <p data-i18n="helpIntro">Өзіңізге сәйкес нұсқаны таңдаңыз.</p>
+      </div>
+      <div class="help-options">
+        <button class="help-option" data-help="interpreter"><span class="action-icon blue">🤟</span><span><strong data-i18n="helpInterpreter">Аудармашы қажет</strong><small data-i18n="helpInterpreterDesc">Ымдау тілі арқылы сөйлесу</small></span><b>›</b></button>
+        <button class="help-option" data-help="medical"><span class="action-icon coral">＋</span><span><strong data-i18n="helpMedical">Медициналық көмек қажет</strong><small data-i18n="helpMedicalDesc">Медициналық мекемеде көмек сұрау</small></span><b>›</b></button>
+        <button class="help-option" data-help="institution"><span class="action-icon violet">⌂</span><span><strong data-i18n="helpInstitution">Мекемеде көмек қажет</strong><small data-i18n="helpInstitutionDesc">Қызметкермен байланысу</small></span><b>›</b></button>
+      </div>
+      <div class="notice emergency-note"><strong data-i18n="emergencyTitle">Шұғыл жағдай</strong><p data-i18n="emergencyText">QOLDAU прототипі жедел қызметке қоңырау шалмайды. Өмірге немесе денсаулыққа қауіп төнсе, тиісті жедел қызметке тікелей хабарласыңыз.</p></div>
+      <p class="inline-feedback" id="help-feedback" role="status"></p>
+    </section>
+
+    <section class="page" id="page-chat">
+      <button class="back-link" data-go="home">← <span data-i18n="backHome">Басты бетке қайту</span></button>
+      <div class="section-heading"><span class="eyebrow">QOLDAU</span><h1 data-i18n="chatTitle">Мәтіндік байланыс</h1><p data-i18n="chatIntro">Хабарлама үлгісін теріп көруге болады. Ол серверге жіберілмейді.</p></div>
+      <div class="chat-box"><div class="chat-message" data-i18n="chatWelcome">Сәлеметсіз бе! Бұл QOLDAU демо чаты.</div><div id="chat-messages"></div></div>
+      <form id="chat-form" class="chat-form"><label for="chat-input" data-i18n="messageLabel">Хабарлама</label><textarea id="chat-input" rows="3" required maxlength="500" data-i18n-placeholder="messagePlaceholder" placeholder="Хабарламаңызды жазыңыз..."></textarea><button class="button button-primary" type="submit" data-i18n="sendMessage">Демо хабарлама қосу</button></form>
+      <p class="inline-feedback" id="chat-feedback" role="status"></p>
+    </section>
+
+    <section class="page" id="page-reviews">
+      <button class="back-link" data-go="home">← <span data-i18n="backHome">Басты бетке қайту</span></button>
+      <div class="section-heading"><span class="eyebrow" data-i18n="feedbackSection">КЕРІ БАЙЛАНЫС</span><h1 data-i18n="reviewsTitle">Пікірлер мен бағалау</h1><p data-i18n="reviewsIntro">Пікірлер осы браузердегі демонстрацияға ғана қосылады.</p></div>
+      <form class="review-form" id="review-form">
+        <label data-i18n="ratingLabel">Қызметті бағалаңыз</label>
+        <div class="stars" role="group" aria-label="Баға беру">
+          <button type="button" class="star selected" data-rating="1" aria-label="1 жұлдыз">★</button><button type="button" class="star selected" data-rating="2" aria-label="2 жұлдыз">★</button><button type="button" class="star selected" data-rating="3" aria-label="3 жұлдыз">★</button><button type="button" class="star selected" data-rating="4" aria-label="4 жұлдыз">★</button><button type="button" class="star selected" data-rating="5" aria-label="5 жұлдыз">★</button>
+        </div>
+        <label for="review-text" data-i18n="reviewTextLabel">Пікіріңіз</label>
+        <textarea id="review-text" rows="4" maxlength="1000" data-i18n-placeholder="reviewPlaceholder" placeholder="Қызмет туралы пікіріңізді жазыңыз..."></textarea>
+        <button class="button button-primary" type="submit" data-i18n="submitReview">Пікірді қосу</button>
+        <p class="inline-feedback" id="review-feedback" role="status"></p>
+      </form>
+      <div class="reviews-heading"><h2 data-i18n="userReviews">Пайдаланушылар пікірі</h2><span class="count" id="review-count">2</span></div>
+      <div class="review-list" id="review-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer"><strong>QOLDAU</strong><span data-i18n="footerText">Ақтөбе · Қолжетімді байланыс</span><small data-i18n="footerDemo">Демонстрациялық прототип · Нақты қызметтер қосылмаған</small></footer>
+  <script src="app.js"></script>
+</body>
+</html>
