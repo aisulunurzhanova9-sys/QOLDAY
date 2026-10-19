@@ -264,7 +264,7 @@ const whatsappMessage = encodeURIComponent(
 );
   
     
-);
+
 );
 const whatsappLink = "https://wa.me/77009617640?text=" + whatsappMessage;
 
