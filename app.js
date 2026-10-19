@@ -258,10 +258,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // WhatsApp видео-диспетчер
 const whatsappMessage = encodeURIComponent(
-  const whatsappMessage = encodeURIComponent(
   (localStorage.getItem("lang") || "kk") === "ru"
     ? "Здравствуйте! Я обращаюсь в службу ВДС. Мне нужна помощь. Прошу принять моё обращение."
     : "Сәлеметсіз бе! Мен ВДС қызметіне хабарласып тұрмын. Маған көмек қажет. Өтінішімді қабылдауыңызды сұраймын."
+);
+  
+    
 );
 );
 const whatsappLink = "https://wa.me/77009617640?text=" + whatsappMessage;
